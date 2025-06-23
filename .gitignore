@@ -47,4 +47,6 @@ __pycache__/
 # privates
 _*/
 
+# temp directories
 temp_check/
+temp_extract/
