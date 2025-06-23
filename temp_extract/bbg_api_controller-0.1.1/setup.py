@@ -2,9 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name="bbg_api_controller",
-    version="0.1.2",
+    version="0.1.1",
     packages=find_packages(),
-    include_package_data=True,
     install_requires=[
         req.strip() for req in open("requirements.txt", encoding="utf-8")
         if req.strip() and not req.strip().startswith("#")

@@ -56,10 +56,6 @@ from bbg_api_controller import application
 
 ## Version History
 
-### v0.1.2
-- Added MANIFEST.in to include requirements.txt and other non-Python files in the package
-- Improved package distribution configuration
-
 ### v0.1.1
 - Added `recurse_squared` function for recursive data fetching, parsing, and insertion process across multiple dates
 - Improved package structure documentation

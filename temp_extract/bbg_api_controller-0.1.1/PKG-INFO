@@ -1,3 +1,33 @@
+Metadata-Version: 2.4
+Name: bbg_api_controller
+Version: 0.1.1
+Summary: A Python package providing utility functions for bbg api controller
+Author: June Young Park
+Author-email: juneyoungpaak@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: pdblp
+Requires-Dist: pandas
+Requires-Dist: tqdm
+Requires-Dist: python-dotenv
+Requires-Dist: canonical_transformer
+Requires-Dist: string_date_controller
+Requires-Dist: shining_pebbles
+Requires-Dist: mongodb_controller
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
 # Bloomberg API Controller (BBG API Controller)
 
 A Python package providing utility functions for Bloomberg API controller. This package helps streamline the process of handling Bloomberg data fetching process and provides related database management.
@@ -55,10 +85,6 @@ from bbg_api_controller import application
 - mongodb_controller
 
 ## Version History
-
-### v0.1.2
-- Added MANIFEST.in to include requirements.txt and other non-Python files in the package
-- Improved package distribution configuration
 
 ### v0.1.1
 - Added `recurse_squared` function for recursive data fetching, parsing, and insertion process across multiple dates
