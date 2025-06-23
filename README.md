@@ -1,10 +1,10 @@
-# BBG API Controller
+# Bloomberg API Controller (BBG API Controller)
 
-A Python package providing utility functions for bbg api controller. This package helps streamline the process of handling bbg data fetching process and provides related database management.
+A Python package providing utility functions for Bloomberg API controller. This package helps streamline the process of handling Bloomberg data fetching process and provides related database management.
 
 ## Features
 
-- BBG data fetching and parsing
+- Bloomberg API data fetching and parsing
 - MongoDB integration for data storage
 
 ## Installation
@@ -13,6 +13,34 @@ You can install the package using pip:
 
 ```bash
 pip install git+https://github.com/nailen1/module-bbg_api_controller.git
+```
+
+## Package Structure
+
+```
+bbg_api_controller/
+├── __init__.py            # Package initialization
+├── application.py         # Application level functionality
+├── composed.py           # Collection of composed or partial functions
+├── connector.py          # Bloomberg connection management
+├── utils.py              # Utility functions
+├── basis/                # Core functionality
+│   ├── __init__.py       # Subpackage initialization
+│   ├── fetcher.py        # Data fetching operations
+│   └── ...               # Other base modules
+└── consts/               # Constants and configurations
+    ├── __init__.py       # Subpackage initialization
+    ├── bbg_consts.py     # Bloomberg-specific constants
+    └── ...               # Other constant definitions
+```
+
+## Usage
+
+```python
+from bbg_api_controller import application
+
+# Example usage code
+# ...
 ```
 
 # Requirements
@@ -25,6 +53,12 @@ pip install git+https://github.com/nailen1/module-bbg_api_controller.git
 - string_date_controller
 - shining_pebbles
 - mongodb_controller
+
+## Version History
+
+### v0.1.1
+- Added `recurse_squared` function for recursive data fetching, parsing, and insertion process across multiple dates
+- Improved package structure documentation
 
 ## License
 

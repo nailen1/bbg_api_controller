@@ -3,9 +3,11 @@ import pandas as pd
 from tqdm import tqdm
 from functools import partial
 from shining_pebbles import get_date_range, get_today, load_json_in_file_folder_by_regex
+from string_date_controller import get_date_n_days_after
 from .basis.utils import parse_datetime
 from .composed import recurse_price, insert_price
 from .consts import TICKER_BBG_MSCI_KR, TICKER_BBG_MSCI_KR_USD, FILE_FOLDER_BBG
+
 
 format_file_name = lambda ticker_bbg, fld: f'data-bbg-ticker_bbg{ticker_bbg}-fld{fld}.csv'
 
@@ -40,3 +42,13 @@ def recurse_and_insert_price(ticker_bbg, date_ref):
 
 recurse_and_insert_mxkr = partial(recurse_and_insert_price, ticker_bbg=TICKER_BBG_MSCI_KR)
 recurse_and_insert_m1kr = partial(recurse_and_insert_price, ticker_bbg=TICKER_BBG_MSCI_KR_USD)
+
+
+def recurese_squared(ticker_bbg, date_ref, i=0):
+    try:
+        date_ref = get_date_n_days_after(date_ref, i)
+        print('|- process:', ticker_bbg, date_ref)
+        recurse_and_parse_and_insert_bbg_price(ticker_bbg=ticker_bbg, date_from=date_ref)
+    except:
+        recurese_squared(ticker_bbg, date_ref, i=i+1)
+    
