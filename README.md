@@ -12,6 +12,10 @@ A Python package providing utility functions for Bloomberg API controller. This 
 You can install the package using pip:
 
 ```bash
+# Install from PyPI
+pip install bbg-api-controller
+
+# Or install directly from GitHub
 pip install git+https://github.com/nailen1/module-bbg_api_controller.git
 ```
 
@@ -53,16 +57,6 @@ from bbg_api_controller import application
 - string_date_controller
 - shining_pebbles
 - mongodb_controller
-
-## Version History
-
-### v0.1.2
-- Added MANIFEST.in to include requirements.txt and other non-Python files in the package
-- Improved package distribution configuration
-
-### v0.1.1
-- Added `recurse_squared` function for recursive data fetching, parsing, and insertion process across multiple dates
-- Improved package structure documentation
 
 ## License
 
